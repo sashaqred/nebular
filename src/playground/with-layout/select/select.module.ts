@@ -25,6 +25,7 @@ import { SelectStatusComponent } from './select-status.component';
 import { SelectInteractiveComponent } from './select-interactive.component';
 import { SelectTestComponent } from './select-test.component';
 import { SelectCompareWithComponent } from './select-compare-with.component';
+import { SelectIssuesComponent } from './select-issues.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SelectCompareWithComponent } from './select-compare-with.component';
     SelectInteractiveComponent,
     SelectTestComponent,
     SelectCompareWithComponent,
+    SelectIssuesComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,159 @@
+<button (click)="eventFunction()">User event</button>
+
+<nb-card>
+  <nb-card-header>
+    Value isn't displayed before any user event
+    <br>
+    Items is displayed
+    <br>
+    [formControl]
+    <br>
+    *ngFor / optionsAfterSetTimeout
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [formControl]="input">
+      <nb-option *ngFor="let option of optionsAfterSetTimeout" [value]="option"> Option {{ option }} </nb-option>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value isn't displayed before any user event
+    <br>
+    Items is displayed
+    <br>
+    [selected]
+    <br>
+    *ngFor / optionsAfterSetTimeout
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [selected]="selectedItem">
+      <nb-option *ngFor="let option of optionsAfterSetTimeout" [value]="option"> Option {{ option }} </nb-option>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value is displayed anytime
+    <br>
+    Items is displayed
+    <br>
+     [formControl]
+    <br>
+    *ngFor / optionsSync
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [formControl]="input">
+      <nb-option *ngFor="let option of optionsSync" [value]="option"> Option {{ option }} </nb-option>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value is displayed anytime
+    <br>
+    Items is displayed
+    <br>
+    [selected]
+    <br>
+    *ngFor / optionsSync
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [selected]="selectedItem">
+      <nb-option *ngFor="let option of optionsSync" [value]="option"> Option {{ option }} </nb-option>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value isn't displayed before  any user event
+    <br>
+    Items isn't displayed
+    <br>
+    [formControl]
+    <br>
+    [ngForOf] / optionsAfterSetTimeout
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [formControl]="input">
+      <ng-template ngFor [ngForOf]="optionsAfterSetTimeout" let-option>
+        <nb-option [value]="option"> Option {{ option }} </nb-option>
+      </ng-template>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value isn't displayed before  any user event
+    <br>
+    Items isn't displayed
+    <br>
+    [selected]
+    <br>
+    [ngForOf] / optionsAfterSetTimeout
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [selected]="selectedItem">
+      <ng-template ngFor [ngForOf]="optionsAfterSetTimeout" let-option>
+        <nb-option [value]="option"> Option {{ option }} </nb-option>
+      </ng-template>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value is displayed anytime
+    <br>
+    Items isn't displayed
+    <br>
+    [formControl]
+    <br>
+    [ngForOf] / optionsSync
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [formControl]="input">
+      <ng-template ngFor [ngForOf]="optionsSync" let-option>
+        <nb-option [value]="option"> Option {{ option }} </nb-option>
+      </ng-template>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Value is displayed anytime
+    <br>
+    Items isn't displayed
+    <br>
+    [selected]
+    <br>
+    [ngForOf] / optionsSync
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [selected]="selectedItem">
+      <ng-template ngFor [ngForOf]="optionsSync" let-option>
+        <nb-option [value]="option"> Option {{ option }} </nb-option>
+      </ng-template>
+    </nb-select>
+  </nb-card-body>
+</nb-card>
+
+<nb-card>
+  <nb-card-header>
+    Options is hardcoded
+  </nb-card-header>
+  <nb-card-body>
+    <nb-select placeholder="Select Showcase" [formControl]="input">
+      <nb-option [value]="1">Option 1</nb-option>
+      <nb-option [value]="2">Option 2</nb-option>
+      <nb-option [value]="3">Option 3</nb-option>
+      <nb-option [value]="4">Option 4</nb-option>
+    </nb-select>
+  </nb-card-body>
+</nb-card>

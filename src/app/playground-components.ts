@@ -1125,6 +1125,12 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
         component: 'SelectCompareWithComponent',
         name: 'Select Compare With',
       },
+      {
+        path: 'select-issues.component',
+        link: '/select/select-issues.component',
+        component: 'SelectIssuesComponent',
+        name: 'Select Issues',
+      },
     ],
   },
   {
